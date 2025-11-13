@@ -22,6 +22,8 @@ class _MainPageState extends State<MainPage> {
   BibliotecaTab(),
   PerfilTab()
   ];
+  
+
 
 
   void _onNavTapped(int index) {

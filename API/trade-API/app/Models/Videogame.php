@@ -18,4 +18,8 @@ class Videogame extends Model
         return $this->HasOne(Oferta::class);
     }
 
+    public function sale(){
+        return $this->hasOne(Sale::class, 'videogameId');
+    }
+
 }

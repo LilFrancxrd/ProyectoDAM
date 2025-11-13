@@ -17,39 +17,60 @@ class BibliotecaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
       child: Container(
+      width: double.infinity,
+    
+      margin: EdgeInsets.symmetric(vertical: 8),
+      decoration: BoxDecoration(
+        color:Colors.lightBlueAccent,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color:Colors.blueGrey.shade600,
+          width: 1
+        )
+      ),
         child: Column(
         crossAxisAlignment:CrossAxisAlignment.start,
           children: [
-            AspectRatio(
-              aspectRatio: 1.0,
+
+            //IMAGEN
+
+            AspectRatio(    
+      
+              aspectRatio: 16/9,
               child: ClipRRect(
-                borderRadius: BorderRadiusGeometry.circular(12.0),
+                borderRadius: BorderRadiusGeometry.directional(topStart: Radius.circular(12)),
                 child: Container(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.white,
                   child: Center(
-                    child: Icon(Icons.videogame_asset , size: 40 , color: Colors.red,),
+                    child: Icon(Icons.videogame_asset , size: 40 , color: Colors.lightBlueAccent),
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 5),
+
+            //TITULO
 
             Text(
               name,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: Colors.black
+                fontSize: 18,
+                color: Colors.white
               ),
               overflow: TextOverflow.ellipsis,
             ),
-            const SizedBox(height: 4.0),
+            const SizedBox(height: 3.0),
+
+            //GENEROS
+
             Text(
               subtitle,
               style: TextStyle(
-                fontSize: 12,
-                color: Colors.grey
+                fontSize: 17,
+                color: Colors.white
               ),
               overflow: TextOverflow.ellipsis
             )

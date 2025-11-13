@@ -14,7 +14,7 @@ class CarritoPage extends StatelessWidget {
         title: const Text('Tu carrito'),
         backgroundColor: Colors.blueGrey.shade900,
       ),
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Colors.blueGrey.shade900,
       body: cart.items.isEmpty
           ? const Center(
               child: Text(

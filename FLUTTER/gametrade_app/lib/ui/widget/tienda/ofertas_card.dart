@@ -82,7 +82,7 @@ class _OfertasCardState extends State<OfertasCard> {
                 SizedBox(height: 4),
                 Text(
                   'Válida hasta $fechaValida',
-                  style: TextStyle(color: Colors.white, fontSize: 10),
+                  style: TextStyle(color: Colors.white, fontSize: 12),
                 ),
                 SizedBox(height: 4),
                 Row(

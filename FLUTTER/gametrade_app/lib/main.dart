@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:videotrade_app/models/cart.dart';
-import 'package:videotrade_app/providers/ofertas_provider.dart'; 
+import 'package:videotrade_app/providers/library_provider.dart';
+import 'package:videotrade_app/providers/ofertas_provider.dart';
+import 'package:videotrade_app/providers/user_provider.dart'; 
 import 'package:videotrade_app/ui/main_page.dart';
 
 void main() => runApp(
@@ -9,7 +11,8 @@ void main() => runApp(
     providers: [
       ChangeNotifierProvider(create: (context) => CartModel()),
       ChangeNotifierProvider(create: (context) => OfertasProvider()), 
-
+      ChangeNotifierProvider(create: (context) => UserProvider()..loadDummyData()),
+      ChangeNotifierProvider(create: (context) => LibraryProvider()..loadDummyData())
     ],
     child: MainApp(),
   )

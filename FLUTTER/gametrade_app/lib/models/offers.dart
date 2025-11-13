@@ -53,18 +53,17 @@ class Oferta{
     }
 
 
-    // double?precioOriginal;
+
     String?imagenUrl;
     
     if(json['video_games']!=null){
       final videoGame = json['video_games'];
-      // precioOriginal = _parseDouble(videoGame['price']);
+
 
       if(videoGame['images'] != null && videoGame['images']is List){
         final images = videoGame['images'] as List;
         if(images.isNotEmpty && images[0]['image_path']!= null){
           imagenUrl = images[0]['image_path'] as String;
-          print('🖼️ [OFERTA] Imagen obtenida: $imagenUrl');
         }
       }
     }

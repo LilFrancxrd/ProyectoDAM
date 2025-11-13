@@ -10,7 +10,7 @@ use App\Http\Controllers\Api\OfferController;
 Route::get('/videogames', [VideogameController::class, 'index']);
 
 
-//genre
+//genres
 Route::get('/genres', [GenreController::class, 'index']);
 
 //
